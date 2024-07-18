@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: sans-serif;
+}
+h2{
+    text-align: center;
+    margin: 15px 0 10px 0;
+}
+h6{
+    margin:4px 14px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    background-color: aqua;
+    padding: 10px;
+}
+
+.wrapper {
+    width: 200px;
+    height: 180px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* form styling */
+.bg {
+    background-color: #9ba2a5;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin: 15px 0 10px 0;
+}
+
+.container {
+   position:relative;
+    box-shadow: 10px 10px 20px  #2e3944;
+    margin: auto;
+    height: 100vh;
+    max-width: 725px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+input, select {
+    width: 100%;
+    padding: 7px;
+    font-size: 18px; 
+    margin: 5px 0 15px 0;
+    border: none;
+    background-color: #d3d9d4;
+}
+label{
+    font-size: 17px;
+}
+.tab-1 , .tab2{
+    position:relative;
+}
+::placeholder {
+    color: #575757;
+    opacity: 1;
+  }
+  .required-field::before {
+    content: "*";
+    color: red;
+   
+  }
+  
+/* Button styling*/
+.btn{
+    margin: 6px;
+    background-color: #04AA6D;
+  color: white;
+    padding:10px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  font-size: 18px;
+}
+.btn:hover {
+    opacity: 1;
+    background-color: #056e47;
+  }
+.btn-2{
+    position:absolute;
+    right:43%;
+    width:110px;
+    margin:0 0 8px;
+    background-color: #212a31;
+    color:#d3d9d4;
+    border-radius: 6px;
+    padding:6px;
+}
+.btn-3{
+    position:absolute;
+    border: none;
+    color: white;
+    right:4%;
+    width:100px;
+    margin:0 0 8px;
+    background-color: #04AA6D;
+    
+    border-radius: 6px;
+    padding:6px;
+}
+/* Hiding elements */
+.hidden {
+    display: none;
+}
+
+/* Style the navigation bar */
+.navbar {
+    display: flex;
+    position: sticky;
+    width: 100%;
+    background-color: #2e3944;
+    overflow: auto;
+}
+
+.navbar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #000;
+}
+
+.active {
+    background-color: #212a31;
+}
+.center{
+    width:440px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}

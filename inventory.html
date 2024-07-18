@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Mangement</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <a class="active" href="#">Inventory</a>
+            <a href="#" id="addBtn"> Add</a>
+            <a href="#" id="removeBtn">Remove</a>
+            <a href="#" id="editBtn">Edit</a>
+        </div>
+    </header>
+    <main id="content"></main>
+    <div class="bg">
+        <form id="inventoryInputForm" class="container">
+            <input type="file" id="imgFile" name="fileName" required>
+            <div class="wrapper">
+                <img id="bikeImg">
+            </div>
+
+            <Button id="importImg" class="btn-2">Preview Image</Button><br>
+            <label for="bikeRegNo">Bike Registration Number:</label>
+            <input type="text" id="bikeRegNo" name="bikeRegNo" required>
+            <label for="bikeType">Type</label>
+            <select id="bikeType" name="bikeType" required>
+                <option value="">Select Bike Type</option>
+            </select>
+
+            <label for="bikeBrand">Brand</label>
+            <select id="bikeBrand" name="bikeBrand" required>
+                <option value="">Select Bike Brand</option>
+            </select>
+                <label for="bikeModal">Modal</label>
+                <input type="text" id="bikeModal" name="bikeModal" required>
+                <label for="bikeManufactureYear">Year of Manufacture:</label>
+                <input type="number" min="1900" id="bikeManufactureYear" name="bikeManufactureYear" required>
+                <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+    <div class="delete-inventory-item">
+
+    </div>
+    <div class="edit-inventory-item"></div>
+    <section class="items-display" id="printScreen"></section>
+    <script src="inventory_control.js"></script>
+</body>
+
+</html>

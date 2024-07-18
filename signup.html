@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="bg">
+        <div class="container">
+            <form action="" class="center" id="signUpForm">
+                <h2>Register</h2>
+                <div class="tab-1" id="registerUser">
+                    <label for="userNIC" class="required-field">National Identity Card Number:</label>
+                    <input type="text" id="userNIC" placeholder="9********V/199********" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="example@gmail.com" required>
+                    <h5>A verification pin will be sent to your email address</h5><br>
+                    <label for="userRole">I am a</label>
+                    <select name="role" id="userRole" required>
+                        <option value="">Select Your Role</option>
+                        <a>
+                            <option value="customer">Customer</option>
+                        </a>
+                        <a>
+                            <option value="manager">Manager</option>
+                        </a>
+
+                    </select>
+                  <h4>Already have an Account? Try <a href="login.html" target="_blank">Login</a></h4> 
+                </div>
+                <button id="nextTabBtn" class="btn-3">Next &nbsp; ></button>
+                <div class="tab-2" id="verification">
+                    <h4>Enter the verification pin sent to your gmail address <h4 id="email"></h4></h4>
+                    <label for="pin">Verification pin:</label>
+                    <div id="info"></div>
+                    <label for="userName">Username:</label>
+                    <input type="text" id="userName" required>
+                    <label for="userPassword">
+                        Password:
+                    </label>
+                    <input type="password" id="userPassword" required>
+
+                    <button type="submit" class="btn">Submit</button>
+                </div>
+            </form>
+            <p id="message"></p>
+        </div>
+    </div>
+    <script src="signup.js"></script>
+</body>
+
+</html>
