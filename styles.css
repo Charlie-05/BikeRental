@@ -8,17 +8,20 @@ body {
     height: 100vh;
     font-family: sans-serif;
 }
-h2{
+
+h2 {
     text-align: center;
     margin: 15px 0 10px 0;
 }
-h6{
-    margin:4px 14px;
+
+h6 {
+    margin: 4px 14px;
 }
+
 .grid-container {
     display: grid;
-    grid-template-columns: auto;
-    background-color: aqua;
+    grid-template-columns: auto auto auto auto auto;
+    background-color: #5f5c5c;
     padding: 10px;
 }
 
@@ -46,8 +49,8 @@ h6{
 }
 
 .container {
-   position:relative;
-    box-shadow: 10px 10px 20px  #2e3944;
+    position: relative;
+    box-shadow: 10px 10px 20px #2e3944;
     margin: auto;
     height: 100vh;
     max-width: 725px;
@@ -56,69 +59,79 @@ h6{
     border-radius: 8px;
 }
 
-input, select {
+input,
+select {
     width: 100%;
     padding: 7px;
-    font-size: 18px; 
+    font-size: 18px;
     margin: 5px 0 15px 0;
     border: none;
     background-color: #d3d9d4;
 }
-label{
+
+label {
     font-size: 17px;
 }
-.tab-1 , .tab2{
-    position:relative;
+
+.tab-1,
+.tab2 {
+    position: relative;
 }
+
 ::placeholder {
     color: #575757;
     opacity: 1;
-  }
-  .required-field::before {
+}
+
+.required-field::before {
     content: "*";
     color: red;
-   
-  }
-  
+
+}
+
 /* Button styling*/
-.btn{
+.btn {
     margin: 6px;
     background-color: #04AA6D;
-  color: white;
-    padding:10px;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-  font-size: 18px;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-size: 18px;
 }
+
 .btn:hover {
     opacity: 1;
     background-color: #056e47;
-  }
-.btn-2{
-    position:absolute;
-    right:43%;
-    width:110px;
-    margin:0 0 8px;
-    background-color: #212a31;
-    color:#d3d9d4;
-    border-radius: 6px;
-    padding:6px;
 }
-.btn-3{
-    position:absolute;
+
+.btn-2 {
+    position: absolute;
+    right: 43%;
+    width: 110px;
+    margin: 0 0 8px;
+    background-color: #212a31;
+    color: #d3d9d4;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+.btn-3 {
+    position: absolute;
     border: none;
     color: white;
-    right:4%;
-    width:100px;
-    margin:0 0 8px;
+    right: 4%;
+    width: 100px;
+    margin: 0 0 8px;
     background-color: #04AA6D;
-    
+
     border-radius: 6px;
-    padding:6px;
+    padding: 6px;
 }
+
 /* Hiding elements */
 .hidden {
     display: none;
@@ -149,11 +162,23 @@ label{
 .active {
     background-color: #212a31;
 }
-.center{
-    width:440px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 10px;
+
+.center {
+    width: 440px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+.min-container {
+    position: relative;
+    box-shadow: 10px 10px 20px #2e3944;
+    margin: auto;
+    height: 300px;
+    width: 225px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
 }
