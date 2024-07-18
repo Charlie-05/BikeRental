@@ -1,27 +1,59 @@
 const bikes = JSON.parse(localStorage.getItem('bikes')) || [];
-let display = document.getElementById('display');
-let filterBtn = document.getElementById('filterBtn');
-document.addEventListener('DOMContentLoaded' , ()=>{
+console.log(bikes);
 
-    for(let i =0 ; i<bikes.length;i++){
-    let imgWrapper = document.createElement('div');
-    imgWrapper.setAttribute('class' , 'wrapper');
-    
-    let img = document.createElement('img')
-    img.src = bikes[i].fileName;
-    imgWrapper.append(img);
-    display.append(imgWrapper);
+const bikeTypes = ['Standard', 'Off-Road', 'Choppers', "Touring",
+    'Scrambler', 'Cruiser', 'SportBike', 'Scooter', 'Moped', 'Electric', 'Bicycle']
+const bikeBrands = ['Yamaha', 'TVS', 'Bajaj', 'KTM', 'Hero', 'Honda', 'Suzuki'];
+let display = document.getElementById('display');
+if(bikes.length == 0){
+    display.innerHTML = "No bikes to display";
+}
+let filterByType = document.getElementById('filterByType');
+let filterByBrand = document.getElementById('filterByBrand')
+document.addEventListener('DOMContentLoaded', () => {
+
+    for (let i = 0; i < bikes.length; i++) {
+        let displayBike = document.createElement('div');
+        displayBike.setAttribute('class' , 'min-container');
+        console.log(bikes.length);
+        if(bikes.length != 0){
+       
+        
+        
+        displayBike.innerHTML = `<div class="wrapper"><img src=${bikes[i].fileName}></img></div><br>
+        Brand : ${bikes[i].bikeBrand}<br>
+        Modal: ${bikes[i].bikeModal}`;
+       }
+        
+        display.append(displayBike);
     }
-    filterBtn.addEventListener('click' , filterBikes);
-   
-    function filterBikes(event){
+    filterByType.addEventListener('click', filterBikes);
+
+    function filterBikes(event) {
         event.preventDefault();
-        result = bikes.filter(filterBike);
-        console.log(result);
+        bikes.forEach(bike => {
+            bikeTypes.forEach(element => {
+                if (bike['bikeType'] == element) {
+                    display.append(bike.bikeType);
+                }else{
+                    console.log('231')
+                }
+            }
+            )
+        })
+
     }
-    function filterBike(bike){
+
+
+
+    function filterBike(bike) {
         console.log(bike);
         return bike['bikeType'] == "Scooter";
     }
-   
+  
 })
+function searchBike(event) {
+    let search = event.target.value;
+    console.log(search);
+}
+
